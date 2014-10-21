@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <div class="tweets">
+    <h1>Send a Tweet:</h1>
+
+    <%= render partial: "tweet_form" %>
+    <%= render partial: "twitter_tweets" %>
+  </div>
+<% end %>

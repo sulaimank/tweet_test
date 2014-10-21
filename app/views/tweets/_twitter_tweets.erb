@@ -1,0 +1,21 @@
+<div id="twitter_tweets">
+    <br><br><br>
+    <h1>Tweets from Twitter</h1>
+
+    <table class="table table-striped table-bordered table-condensed">
+        <thead>
+          <th>Timestamp</th>
+          <th>Message</th>
+          <th>Tweet Link</th>
+        </thead>
+        <tbody>
+          <% @twitter_tweets.each do |tweet| %>
+            <tr>
+              <td><%= tweet.created_at %></td>
+              <td><%= tweet.full_text %></td>
+              <td><%= link_to "#{tweet.id}", "https://twitter.com/skarmali/status/#{tweet.id}" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+    </table>
+</div>
