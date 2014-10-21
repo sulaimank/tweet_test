@@ -2,12 +2,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar .nav > li > a {
+  float: none;
+  line-height: 19px;
+  padding: 9px 10px 11px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ddd;
+}
+
 .tweets {
   background-color: #c0deed;
 }
 
-.tweet_form {
-  background-color: #c0deed;
+.tweet_form textarea {
+  background-color: lightyellow;
 }
 
 // make all images responsive by default
@@ -43,7 +52,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  background-color: #0084B4;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
