@@ -30,5 +30,6 @@ class TweetsController < ApplicationController
 
   def set_twitter_tweets
     @twitter_tweets = Tweet.retrieve_all_tweets
+    @twitter_tweets = [] if @twitter_tweets.nil?
   end
 end

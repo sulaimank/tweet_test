@@ -1,0 +1,23 @@
+This is a Ruby On Rails application that allows a user to authenticate with
+Twitter using OAuth.  Once, the user and then be able to post Tweets and retrieve
+Tweets using Twitters API.
+
+To get this to work, I had to log into Twitter and create an App.  This generated
+access tokens and provider keys that this RoR app uses to be able to post and
+request Tweets for the signed in user.
+
+Prior to running the rails server, please define the following environment variables:
+
+OMNIAUTH_ACCESS_TOKEN
+OMNIAUTH_ACCESS_TOKEN_SECRET
+OMNIAUTH_PROVIDER_KEY
+OMNIAUTH_PROVIDER_SECRET
+
+For default username, set optional environment variable:
+OMNIAUTH_DEFAULT_USERNAME
+
+When we request Tweets from Twitter, we persist them to local SQLite database.
+
+When user posts a Tweet, I am persisting the tweet to the database with a special
+tweet id.  When retrieving Tweets, detect if the Tweet we tried posting did not
+get posted and retry.
