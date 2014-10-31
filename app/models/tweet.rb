@@ -37,7 +37,8 @@ class Tweet < ActiveRecord::Base
   end
 
   def self.retrieve_all_tweets
-    username = User.first.name || ENV['OMNIAUTH_DEFAULT_USERNAME']
+    username = User.first.name unless User.first.nil?
+    username ||= ENV['OMNIAUTH_DEFAULT_USERNAME']
 
     begin
       # TODO - should set a limit on the timeline
