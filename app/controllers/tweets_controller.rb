@@ -1,3 +1,4 @@
+# Author: Sulaiman Karmali
 class TweetsController < ApplicationController
   before_action :set_tweets, only: [:index]
   before_action :set_twitter_tweets, only: [:index, :create]
