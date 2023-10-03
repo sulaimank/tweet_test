@@ -1,5 +1,6 @@
 require 'twitter'
 
+# Author: Sulaiman Karmali
 class Tweet < ActiveRecord::Base
   # Tweet cannot exceed 140 characters
   validates :message, length: { maximum: 140 }
